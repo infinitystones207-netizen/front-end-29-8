@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Retainer — Dashboard</title>
+  <link rel="stylesheet" href="./styles.css"/>
+  <link rel="icon" href="./assets/logo.svg" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="./index.html"><img src="./assets/logo.svg" alt="Customer Retainer" class="logo"/></a>
+    <nav>
+      <a href="./index.html" class="btn btn-outline">Home</a>
+    </nav>
+  </div>
+</header>
+
+<main class="dashboard container">
+  <h1>Dashboard</h1>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-label">Customers</div>
+      <div id="customersCount" class="stat-value">0</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Price / Customer</div>
+      <div class="stat-value">$220</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Potential Revenue</div>
+      <div id="revenue" class="stat-value">$0</div>
+    </div>
+  </div>
+
+  <section class="panel">
+    <h2>Add Customer</h2>
+    <form id="customerForm" class="form">
+      <div class="row">
+        <label>Business Name<input name="name" required placeholder="Acme LLC"/></label>
+        <label>Contact Email<input name="email" type="email" required placeholder="owner@acme.com"/></label>
+        <label>Phone<input name="phone" required placeholder="+15551234567"/></label>
+      </div>
+      <button class="btn btn-primary" type="submit">Add</button>
+      <span id="customerMsg" class="muted"></span>
+    </form>
+  </section>
+
+  <section class="panel">
+    <h2>Leads</h2>
+    <table id="leadsTable">
+      <thead>
+        <tr><th>When</th><th>Name</th><th>Phone</th><th>Email</th><th>Message</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <small>© <span id="year"></span> Customer Retainer. All rights reserved.</small>
+  </div>
+</footer>
+<script src="./app.js"></script>
+</body>
+</html>
