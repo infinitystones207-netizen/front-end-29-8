@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Retainer</title>
+  <link rel="stylesheet" href="./styles.css"/>
+  <link rel="icon" href="./assets/logo.svg" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <img src="./assets/logo.svg" alt="Customer Retainer" class="logo"/>
+    <nav>
+      <a href="./dashboard.html" class="btn btn-outline">Dashboard</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <h1>Keep every missed call — and turn it into revenue.</h1>
+      <p>Customer Retainer automatically texts missed callers to capture their name, email, and reason for calling.
+      Simple setup. $220 per customer. Scale up to 1,000 customers.</p>
+      <div class="cta-row">
+        <button id="payBtn" class="btn btn-primary">Pay $220 &amp; Get Started</button>
+        <a href="#how" class="btn btn-ghost">How it works</a>
+      </div>
+      <p id="payMsg" class="muted note"></p>
+    </div>
+  </section>
+
+  <section id="how" class="how-it-works">
+    <div class="container grid-3">
+      <div class="card">
+        <h3>1) Connect</h3>
+        <p>Forward missed call webhooks from your phone system to our secure endpoint.</p>
+      </div>
+      <div class="card">
+        <h3>2) Auto-Text</h3>
+        <p>We text the caller asking for their name, email, and a short message.</p>
+      </div>
+      <div class="card">
+        <h3>3) Capture</h3>
+        <p>Leads land in your dashboard instantly so you can follow up.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lead-capture">
+    <div class="container">
+      <h2>Test it yourself</h2>
+      <p>Enter your info to simulate a missed-call text reply.</p>
+      <form id="leadForm" class="form">
+        <div class="row">
+          <label>Name<input name="name" required placeholder="Jane Doe"/></label>
+          <label>Email<input name="email" type="email" required placeholder="jane@example.com"/></label>
+          <label>Phone<input name="phone" required placeholder="+15551234567"/></label>
+        </div>
+        <label>Message<textarea name="message" rows="3" placeholder="What were you calling about?"></textarea></label>
+        <button class="btn btn-primary" type="submit">Send</button>
+        <span id="leadMsg" class="muted"></span>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <small>© <span id="year"></span> Customer Retainer. All rights reserved.</small>
+  </div>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>
